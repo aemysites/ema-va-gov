@@ -1,0 +1,62 @@
+/* Cards Related Links - structural layout only.
+ * Boxed panel: optional title with a bottom rule, then a 1-column list of
+ * title link + description items. Colours/typography come from the design pass. */
+.cards-related-links {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.cards-related-links .cards-related-links-heading {
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid currentcolor;
+}
+
+.cards-related-links .cards-related-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+.cards-related-links .cards-related-links-item {
+  margin: 0;
+  padding: 0;
+}
+
+.cards-related-links .cards-related-links-body > * {
+  margin: 0;
+}
+
+.cards-related-links .cards-related-links-title {
+  margin: 0 0 0.25rem;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* bold the title link without relying on authored <strong> */
+.cards-related-links .cards-related-links-title a {
+  font-weight: 700;
+}
+
+/* never render items as buttons, even if authored bold */
+.cards-related-links a.button,
+.cards-related-links a.button:any-link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  text-align: start;
+  white-space: normal;
+}
+
+@media (width >= 600px) {
+  .cards-related-links {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+}

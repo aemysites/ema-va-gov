@@ -1,0 +1,60 @@
+/* Cards Rail Promo - structural layout only.
+ * Single-column stack of promo cards: full-width image above the text body.
+ * Colours/typography come from the design pass. */
+.cards-rail-promo .cards-rail-promo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.cards-rail-promo .cards-rail-promo-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.cards-rail-promo .cards-rail-promo-image {
+  line-height: 0;
+}
+
+.cards-rail-promo .cards-rail-promo-image picture,
+.cards-rail-promo .cards-rail-promo-image img {
+  display: block;
+  width: 100%;
+}
+
+.cards-rail-promo .cards-rail-promo-image img {
+  height: auto;
+}
+
+.cards-rail-promo .cards-rail-promo-body {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.cards-rail-promo .cards-rail-promo-body > * {
+  margin: 0 0 0.5rem;
+}
+
+.cards-rail-promo .cards-rail-promo-body > *:last-child {
+  margin-bottom: 0;
+}
+
+.cards-rail-promo .cards-rail-promo-title {
+  margin-top: 0;
+}
+
+.cards-rail-promo .cards-rail-promo-title a.button,
+.cards-rail-promo .cards-rail-promo-body a.button {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  white-space: normal;
+}

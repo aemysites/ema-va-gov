@@ -1,0 +1,153 @@
+/* Cards Benefit Hub
+ * Values extracted from https://www.va.gov/ "Explore VA benefits and health care"
+ * (section[data-e2e="hubs"]): 12 hubs, 1 column on mobile, 3 columns from 768px
+ * (VADS tablet-lg). Each hub: H3 (Bitter 20/26 bold) with a 40px coloured
+ * circle icon + link, followed by a description paragraph. */
+.cards-benefit-hub {
+  /* per-hub icon circle colours (VADS vads-u-background-color--hub-*) */
+  --hub-health-care-color: #3f57a6;
+  --hub-disability-color: #a23737;
+  --hub-education-color: #162e51;
+  --hub-careers-color: #bd5727;
+  --hub-pension-color: #4d8055;
+  --hub-housing-color: #8e704f;
+  --hub-life-insurance-color: #6f7a41;
+  --hub-burials-color: #2378c3;
+  --hub-records-color: #6f7a41;
+  --hub-service-member-color: #162e51;
+  --hub-family-member-color: #162e51;
+  --hub-department-color: var(--vads-color-primary-darker, #162e51);
+}
+
+.cards-benefit-hub .cards-benefit-hub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+
+.cards-benefit-hub .cards-benefit-hub-card {
+  margin: 0;
+  padding: 0;
+}
+
+.cards-benefit-hub .cards-benefit-hub-body > * {
+  margin: 0;
+}
+
+/* heading: Bitter 20px/26px bold, flex row with the icon circle */
+.cards-benefit-hub .cards-benefit-hub-body > .cards-benefit-hub-title {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 10px;
+  padding: 0;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+.cards-benefit-hub .cards-benefit-hub-title a:any-link {
+  color: var(--link-color);
+  text-decoration: underline;
+  font: inherit;
+}
+
+.cards-benefit-hub .cards-benefit-hub-title a:hover {
+  color: var(--link-hover-color);
+}
+
+.cards-benefit-hub .cards-benefit-hub-title a:active {
+  color: var(--vads-color-primary-darker);
+}
+
+.cards-benefit-hub .cards-benefit-hub-title a:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+/* description: Source Sans 16.96px/25.44px */
+.cards-benefit-hub .cards-benefit-hub-body > p {
+  margin: 0;
+  font-size: var(--body-font-size-m);
+  font-weight: 500;
+  line-height: 25.44px;
+  color: var(--text-color);
+}
+
+/* icon circle: 40px, white 24px glyph, 8px gap before the link */
+.cards-benefit-hub .cards-benefit-hub-icon {
+  --cards-benefit-hub-icon-bg: var(--hub-department-color);
+
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px 0 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--cards-benefit-hub-icon-bg);
+  color: var(--vads-color-white);
+}
+
+.cards-benefit-hub .cards-benefit-hub-icon .icon,
+.cards-benefit-hub .cards-benefit-hub-icon picture {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+}
+
+.cards-benefit-hub .cards-benefit-hub-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* missing icon asset: keep the circle, hide the broken image */
+.cards-benefit-hub .cards-benefit-hub-icon-missing img {
+  visibility: hidden;
+}
+
+/* per-hub icon colours */
+.cards-benefit-hub .cards-benefit-hub-icon-medical-services { --cards-benefit-hub-icon-bg: var(--hub-health-care-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-description { --cards-benefit-hub-icon-bg: var(--hub-disability-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-school { --cards-benefit-hub-icon-bg: var(--hub-education-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-work { --cards-benefit-hub-icon-bg: var(--hub-careers-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-handshake { --cards-benefit-hub-icon-bg: var(--hub-pension-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-home { --cards-benefit-hub-icon-bg: var(--hub-housing-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-shield { --cards-benefit-hub-icon-bg: var(--hub-life-insurance-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-star { --cards-benefit-hub-icon-bg: var(--hub-burials-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-id-card { --cards-benefit-hub-icon-bg: var(--hub-records-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-flag { --cards-benefit-hub-icon-bg: var(--hub-service-member-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-groups { --cards-benefit-hub-icon-bg: var(--hub-family-member-color); }
+.cards-benefit-hub .cards-benefit-hub-icon-account-balance { --cards-benefit-hub-icon-bg: var(--hub-department-color); }
+
+/* VADS tablet-lg: 3 columns, 24px gutters, 24px under every row */
+@media (width >= 768px) {
+  .cards-benefit-hub .cards-benefit-hub-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+/* section band around the hub grid (source: section.vads-grid-container, 20px gutters) */
+main > .section.cards-benefit-hub-container {
+  padding: 20px 0 24px;
+}
+
+main > .section.cards-benefit-hub-container > div {
+  padding: 0 20px;
+}
+
+@media (width >= 768px) {
+  main > .section.cards-benefit-hub-container {
+    padding: 48px 0 72px;
+  }
+}

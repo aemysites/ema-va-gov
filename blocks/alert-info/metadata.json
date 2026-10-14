@@ -1,0 +1,24 @@
+{
+  "variantName": "alert-info",
+  "baseBlock": "alert",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light-blue",
+    "density": "moderate",
+    "purpose": "info-alert",
+    "imagePattern": "icon",
+    "structure": "heading + text + optional expandable details"
+  },
+  "contentPattern": "1 column. Row 1: heading (H2) followed by any always-visible body (paragraphs, links). Optional Row 2 (2 cells): [trigger text | hidden details content] rendered as <details>/<summary>. Family page: Row 1 = H2 'How do I get help for a Veteran who's in crisis?'; Row 2 = 'Find out how to get support anytime, day or night' | paragraphs + bold lead-ins + ul of tel/sms/chat links. Variant B (health-care, housing): Row 1 only = H2 + p + p>a 'Get help if you're homeless or at risk of becoming homeless'. Absent on life-insurance. Strip sr-only 'Information Alert' prefix.",
+  "usage": {
+    "pagesUsing": [
+      "https://www.va.gov/family-and-caregiver-benefits/",
+      "https://www.va.gov/health-care/",
+      "https://www.va.gov/housing-assistance/"
+    ],
+    "reuseCount": 3,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": ["alert-info"]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "ema-va-gov": {
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json",
+      "previewOrg": "aemysites",
+      "previewSite": "ema-va-gov",
+      "contentHostUrl": "https://content.da.live/aemysites/ema-va-gov/"
+    }
+  }
+}

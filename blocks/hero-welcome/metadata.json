@@ -1,0 +1,20 @@
+{
+  "variantName": "hero-welcome",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "purpose": "homepage-welcome-hero",
+    "imagePattern": "noimg",
+    "structure": "h1 eyebrow + heading + text + action link + callout card(text + button + link)"
+  },
+  "contentPattern": "1 row, 2 cells. Cell 1: H1 'Welcome to VA.gov', H2 'Let us help you get started', paragraph, link 'Get started with VA'. Cell 2 (callout card): paragraph/H2 'Create an account…', link 'Create account' (bold = primary button; href e.g. /sign-in or #sign-in since source is a modal button), link 'Learn how an account helps you'. No background image row — gradient is CSS.",
+  "usage": {
+    "pagesUsing": ["https://www.va.gov/"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": ["hero-welcome"]
+}

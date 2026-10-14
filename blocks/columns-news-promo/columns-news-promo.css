@@ -1,0 +1,129 @@
+/* Columns News Promo - values extracted from va.gov homepage news promo (computed styles) */
+
+/* full-bleed band: source grid container has no horizontal padding */
+main > .section > .columns-news-promo-wrapper {
+  padding: 0;
+}
+
+.columns-news-promo {
+  color: var(--vads-color-white);
+}
+
+.columns-news-promo .columns-news-promo-row {
+  display: flex;
+  flex-direction: column;
+}
+
+/* image column is hidden below the source "desktop" breakpoint (1024px) */
+.columns-news-promo .columns-news-promo-image {
+  display: none;
+  position: relative;
+  line-height: 0;
+}
+
+.columns-news-promo .columns-news-promo-image picture {
+  position: absolute;
+  inset: 0;
+}
+
+.columns-news-promo .columns-news-promo-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.columns-news-promo .columns-news-promo-body {
+  padding: 20px;
+  color: var(--vads-color-white);
+}
+
+.columns-news-promo .columns-news-promo-body > :first-child {
+  margin-top: 0;
+}
+
+/* "VA NEWS" eyebrow (h2 on source): Bitter 16px / 400 / 1.3 */
+.columns-news-promo .columns-news-promo-eyebrow {
+  margin: 0 0 8px;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* title: Bitter 32px / 700 / 41.6px at all widths */
+.columns-news-promo .columns-news-promo-heading {
+  margin: 0 0 16px;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-size-xl);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.columns-news-promo p {
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+}
+
+/* description paragraph */
+.columns-news-promo .columns-news-promo-heading + p {
+  margin: var(--body-font-size-m) 0 24px;
+}
+
+.columns-news-promo .columns-news-promo-body > :last-child {
+  margin-bottom: var(--body-font-size-m);
+}
+
+.columns-news-promo .columns-news-promo-body a:any-link {
+  color: var(--vads-color-white);
+  text-decoration: underline;
+}
+
+/* "More VA news" link: bold with trailing chevron (va-link active reverse) */
+.columns-news-promo .columns-news-promo-more {
+  margin: var(--body-font-size-m) 0;
+}
+
+.columns-news-promo .columns-news-promo-more a:any-link {
+  font-weight: 700;
+}
+
+.columns-news-promo .columns-news-promo-more a:any-link::after {
+  content: '';
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-left: 0.5em;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+  transform: translateY(-0.1em) rotate(45deg);
+}
+
+@media (width >= 900px) {
+  .columns-news-promo .columns-news-promo-row {
+    flex-direction: row;
+  }
+
+  .columns-news-promo .columns-news-promo-body {
+    box-sizing: border-box;
+    flex: 0 0 66.6667%;
+    max-width: 66.6667%;
+  }
+}
+
+@media (width >= 1024px) {
+  .columns-news-promo .columns-news-promo-image {
+    display: block;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  .columns-news-promo .columns-news-promo-body {
+    padding: 48px;
+  }
+
+  .columns-news-promo .columns-news-promo-heading + p {
+    margin-bottom: 48px;
+    padding-right: 64px;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "variantName": "columns-news-promo",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "purpose": "news-promo",
+    "imagePattern": "image-left",
+    "structure": "image | eyebrow + heading + text + link"
+  },
+  "contentPattern": "1 row, 2 cells. Cell 1: image (Benefits app graphic). Cell 2: paragraph 'VA NEWS' (eyebrow), H3/H2 'Download the VA Health and Benefits App', paragraph + inline link, paragraph with link 'More VA news'.",
+  "usage": {
+    "pagesUsing": ["https://www.va.gov/"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": ["columns-news-promo"]
+}

@@ -1,0 +1,183 @@
+/*
+ * Hero Welcome (VA.gov homepage hero).
+ * Values extracted from https://www.va.gov/ (.homepage-hero__wrapper).
+ * Source layout breakpoint is 1024px (VADS tablet-lg / desktop).
+ */
+
+/* full-bleed: release the 1024px section wrapper so the gradient spans the viewport */
+main > .section > .hero-welcome-wrapper {
+  max-width: none;
+  padding: 0;
+  background-image: linear-gradient(to left, var(--vads-color-primary) 30%, var(--vads-color-primary-dark) 60%, var(--vads-color-primary-darker));
+}
+
+.hero-welcome {
+  box-sizing: border-box;
+  position: relative;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero-welcome .hero-welcome-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+/* left column: eyebrow, heading, intro, action link */
+.hero-welcome .hero-welcome-content {
+  padding: 40px 0 24px;
+  color: var(--vads-color-white);
+}
+
+.hero-welcome .hero-welcome-content > :first-child {
+  margin-top: 0;
+}
+
+.hero-welcome .hero-welcome-content h1,
+.hero-welcome .hero-welcome-content h2,
+.hero-welcome .hero-welcome-content p {
+  color: var(--vads-color-white);
+}
+
+.hero-welcome .hero-welcome-eyebrow {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 16px;
+  padding: 8px 0;
+  border-top: 1px solid var(--vads-color-white);
+  border-bottom: 1px solid var(--vads-color-white);
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.hero-welcome .hero-welcome-content h2 {
+  margin: 24px 0 16px;
+  font-size: 32px;
+  line-height: 41.6px;
+}
+
+.hero-welcome .hero-welcome-content p {
+  margin: 16.96px 0;
+  padding-right: 40px;
+  font-size: var(--body-font-size-m);
+  line-height: 25.44px;
+}
+
+/* action link (va-link-action type="reverse") */
+.hero-welcome .hero-welcome-content p.hero-welcome-action {
+  margin-bottom: 0;
+  padding-right: 0;
+}
+
+.hero-welcome .hero-welcome-action a:any-link {
+  display: inline-flex;
+  align-items: flex-start;
+  max-width: 100%;
+  padding: 8px 0;
+  color: var(--vads-color-white);
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  line-height: 25.44px;
+  text-decoration: underline;
+}
+
+.hero-welcome .hero-welcome-action a:hover {
+  color: var(--vads-color-white);
+}
+
+.hero-welcome .hero-welcome-action a::before {
+  content: "";
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--vads-color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+}
+
+/* right column: create-account card */
+.hero-welcome .hero-welcome-callout {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 24px 0 48px;
+  padding: 16px 24px;
+  border-radius: 5px;
+  background-color: var(--vads-color-white);
+  color: var(--text-color);
+}
+
+.hero-welcome .hero-welcome-callout > :first-child {
+  margin-top: 0;
+}
+
+.hero-welcome .hero-welcome-callout h2,
+.hero-welcome .hero-welcome-callout h3 {
+  margin: 0 0 8.504px;
+  padding-right: 16px;
+  color: var(--vads-color-gray-medium);
+  font-family: var(--body-font-family);
+  font-size: 17.008px;
+  font-weight: 400;
+  line-height: 27.553px;
+}
+
+.hero-welcome .hero-welcome-callout p {
+  margin: 16.96px 0;
+  font-size: var(--body-font-size-m);
+  line-height: 25.44px;
+}
+
+.hero-welcome .hero-welcome-callout p.button-wrapper,
+.hero-welcome .hero-welcome-callout .button-container {
+  margin: 0 0 24px;
+  line-height: normal;
+}
+
+/* trailing text link keeps no bottom margin; the button wrapper (higher specificity) keeps its 24px */
+.hero-welcome .hero-welcome-callout > :last-child {
+  margin-bottom: 0;
+}
+
+.hero-welcome .hero-welcome-callout a.button.primary:any-link {
+  white-space: normal;
+}
+
+@media (width >= 1024px) {
+  .hero-welcome {
+    padding: 0 32px;
+  }
+
+  .hero-welcome .hero-welcome-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .hero-welcome .hero-welcome-content,
+  .hero-welcome .hero-welcome-callout {
+    /* two equal 50% columns with a 48px gutter (VADS grid-gap-6) */
+    flex: 0 0 calc(50% - 24px);
+    min-width: 0;
+  }
+
+  .hero-welcome .hero-welcome-content {
+    padding-bottom: 64px;
+  }
+
+  .hero-welcome .hero-welcome-eyebrow {
+    max-width: 50%;
+  }
+
+  .hero-welcome .hero-welcome-content h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .hero-welcome.hero-welcome-no-callout .hero-welcome-content {
+    flex: 0 1 50%;
+  }
+}

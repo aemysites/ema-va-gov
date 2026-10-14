@@ -1,0 +1,102 @@
+/* Alert Info - structural layout only.
+ * Icon column + body column; optional native <details> disclosure.
+ * Brand colours, borders and typography are applied by the design pass. */
+.alert-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-left: 0.5rem solid currentcolor;
+  padding: 1rem 1rem 1rem 0.75rem;
+  box-sizing: border-box;
+}
+
+.alert-info .alert-info-icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: currentcolor;
+}
+
+.alert-info .alert-info-icon::before {
+  content: 'i';
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: var(--background-color, #fff);
+}
+
+.alert-info .alert-info-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.alert-info .alert-info-body > *:first-child {
+  margin-top: 0;
+}
+
+.alert-info .alert-info-body > *:last-child,
+.alert-info .alert-info-content > *:last-child,
+.alert-info .alert-info-details-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.alert-info .alert-info-title {
+  margin: 0 0 0.5rem;
+}
+
+.alert-info .alert-info-content > *:first-child {
+  margin-top: 0;
+}
+
+/* disclosure */
+.alert-info .alert-info-details {
+  margin-top: 0.5rem;
+}
+
+.alert-info .alert-info-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.alert-info .alert-info-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.alert-info .alert-info-trigger::after {
+  content: '';
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-left: 0.25em;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: translateY(-0.15em) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.alert-info .alert-info-details[open] > .alert-info-trigger::after {
+  transform: translateY(0.1em) rotate(-135deg);
+}
+
+.alert-info .alert-info-details-content {
+  margin-top: 0.75rem;
+  padding-left: 1rem;
+  border-left: 4px solid currentcolor;
+}
+
+.alert-info .alert-info-details-content > *:first-child {
+  margin-top: 0;
+}
+
+@media (width >= 600px) {
+  .alert-info {
+    padding: 1rem 1.5rem 1rem 1rem;
+  }
+}

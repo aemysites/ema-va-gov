@@ -1,0 +1,20 @@
+{
+  "variantName": "form-email-signup",
+  "baseBlock": "form",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light-blue",
+    "density": "minimal",
+    "purpose": "email-signup",
+    "imagePattern": "noimg",
+    "structure": "email input + submit button"
+  },
+  "contentPattern": "Optional heading/paragraph intro (e.g. H2 'Sign up to get the latest VA updates'), then optional two-cell config rows: Label | Email address, Button | Sign up, Action | <subscriber endpoint URL>, Name | email, Placeholder, Required | true, Success | message, Hidden | key=value. A standalone non-.json link is also accepted as the form action. Renders one required email input + submit button; without an action URL it validates and confirms locally.",
+  "usage": {
+    "pagesUsing": ["https://www.va.gov/"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": ["form-email-signup"]
+}

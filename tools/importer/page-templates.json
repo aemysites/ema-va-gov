@@ -1,0 +1,134 @@
+{
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.va.gov/"
+      ],
+      "representativeUrl": "https://www.va.gov/",
+      "description": "VA.gov homepage",
+      "blocks": [
+        {
+          "name": "hero-welcome",
+          "instances": [
+            "#content > div.homepage-hero__wrapper",
+            ".homepage-hero__wrapper"
+          ]
+        },
+        {
+          "name": "columns-search-tools",
+          "instances": [
+            "#content > div.template-module__JEykya__wrapper",
+            "#content > div[class*=\"template-module__\"][class$=\"__wrapper\"]"
+          ]
+        },
+        {
+          "name": "columns-news-promo",
+          "instances": [
+            "#content > div.vads-u-background-color--primary-dark",
+            ".vads-u-background-color--primary-dark .homepage-blog"
+          ]
+        },
+        {
+          "name": "cards-benefit-hub",
+          "instances": [
+            "#content > section.vads-grid-container > div.vads-grid-row"
+          ]
+        },
+        {
+          "name": "form-email-signup",
+          "instances": [
+            ".homepage-email-update-wrapper .email-signup-form",
+            "#email-signup-form"
+          ]
+        }
+      ],
+      "urlPattern": "/",
+      "sections": [
+        {
+          "id": "1",
+          "name": "hero-welcome",
+          "selector": [
+            "#content > div.homepage-hero__wrapper",
+            ".homepage-hero__wrapper"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-welcome"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "2",
+          "name": "search-tools",
+          "selector": [
+            "#content > div.template-module__JEykya__wrapper",
+            "#content > div[class*=\"template-module__\"][class$=\"__wrapper\"]"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-search-tools"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "3",
+          "name": "news-promo",
+          "selector": [
+            "#content > div.vads-u-background-color--primary-dark"
+          ],
+          "style": "dark",
+          "blocks": [
+            "columns-news-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "4",
+          "name": "explore-benefits",
+          "selector": [
+            "#content > section.vads-grid-container"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-benefit-hub"
+          ],
+          "defaultContent": [
+            "#content > section.vads-grid-container > h2"
+          ]
+        },
+        {
+          "id": "5",
+          "name": "email-signup",
+          "selector": [
+            "#content > div.homepage-email-update-wrapper",
+            ".homepage-email-update-wrapper"
+          ],
+          "style": "light-blue",
+          "blocks": [
+            "form-email-signup"
+          ],
+          "defaultContent": [
+            "#vets-banner-1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "family-and-caregiver-benefits",
+      "urls": [
+        "https://www.va.gov/family-and-caregiver-benefits/",
+        "https://www.va.gov/health-care/",
+        "https://www.va.gov/housing-assistance/",
+        "https://www.va.gov/life-insurance/"
+      ],
+      "representativeUrl": "https://www.va.gov/family-and-caregiver-benefits/",
+      "description": "Benefit hub landing pages",
+      "blocks": [],
+      "urlPattern": "/*"
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}

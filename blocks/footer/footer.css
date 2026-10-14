@@ -1,20 +1,418 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+/*
+ * Footer block — values measured from the https://www.va.gov/ footer.
+ * Mobile-first: base rules are the small-screen accordion layout (375px),
+ * the 900px query restores the four-column wide-screen layout (1440px).
+ */
+
+.footer {
+  background-color: var(--vads-color-primary-darker);
+
+  /* source paints the footer colour below the page end (overscroll fill) */
+  box-shadow: 0 450px 0 450px var(--vads-color-primary-darker);
+  color: var(--vads-color-white);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 24px;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+.footer .footer-inner {
+  padding: 0 0 20px;
 }
 
-footer .footer p {
+.footer ul {
   margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16.96px;
+  line-height: 25.44px;
 }
 
+.footer h2 {
+  margin: 0;
+  color: var(--vads-color-white);
+  font-family: var(--heading-font-family);
+  font-size: 17.6px;
+  font-weight: 700;
+  line-height: 22.88px;
+
+  /* source Bitter cut sets wider than the web-font build used here */
+  letter-spacing: 0.065em;
+}
+
+.footer a:any-link {
+  color: var(--vads-color-white);
+  text-decoration: underline;
+}
+
+.footer a:focus-visible,
+.footer button:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+/* link columns */
+.footer .footer-columns {
+  display: none;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer .footer-column {
+  margin: 32px 0 24px;
+}
+
+.footer .footer-column-title {
+  padding-bottom: 16px;
+}
+
+.footer .footer-column-subtitle {
+  margin-top: 16.9px;
+  padding-bottom: 8px;
+}
+
+.footer .footer-links a:any-link {
+  display: inline-block;
+  margin: 4.24px 0;
+  font-weight: 400;
+}
+
+.footer .footer-links a:hover {
+  color: #ffbe2e;
+}
+
+.footer .footer-link-button {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--vads-color-white);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  text-align: start;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer .footer-link-button:hover {
+  background-color: rgb(0 0 0 / 5%);
+  color: #ffbe2e;
+}
+
+/* bottom bands */
+.footer .footer-band {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer .footer-band-bordered {
+  display: none;
+  box-sizing: border-box;
+  padding: 16px 8px 12px 0;
+  border-top: 1px solid var(--vads-color-white);
+  border-bottom: 1px solid var(--vads-color-white);
+}
+
+.footer .footer-band-title {
+  padding-bottom: 8px;
+}
+
+.footer .footer-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .footer-inline-links li {
+  margin: 0 0 4.24px;
+}
+
+.footer .footer-inline-links li:last-child {
+  margin-bottom: 0;
+}
+
+.footer .footer-inline-links li:not(:last-child)::after {
+  content: "|";
+  padding: 0 10px;
+}
+
+.footer .footer-inline-links a:hover {
+  background-color: rgb(0 0 0 / 5%);
+  color: var(--vads-color-white);
+}
+
+.footer .footer-logo {
+  box-sizing: border-box;
+  padding: 24px 8px 32px;
+}
+
+.footer .footer-logo p {
+  margin: 0;
+  line-height: 0;
+}
+
+.footer .footer-logo a:any-link {
+  display: inline-block;
+  color: var(--link-color);
+}
+
+.footer .footer-logo a:hover {
+  background-color: rgb(0 0 0 / 5%);
+  color: var(--vads-color-white);
+}
+
+.footer .footer-logo img {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer .footer-legal {
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+.footer .footer-legal ul {
+  padding-bottom: 50.88px;
+}
+
+/* dialog (Veterans Crisis Line) */
+.footer .footer-dialog {
+  box-sizing: border-box;
+  width: 750px;
+  max-width: calc(100vw - 37px);
+  padding: 0;
+  border: 0;
+  background-color: var(--vads-color-white);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+}
+
+.footer .footer-dialog::backdrop {
+  background-color: rgb(50 58 69 / 80%);
+}
+
+.footer .footer-dialog-close {
+  position: absolute;
+  top: 21px;
+  right: 16px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--vads-color-primary);
+  cursor: pointer;
+}
+
+.footer .footer-dialog-close:hover {
+  color: var(--vads-color-primary-dark);
+}
+
+.footer .footer-dialog-close img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.footer .footer-dialog-body {
+  padding: 24px;
+  font-size: 16.96px;
+  line-height: 25.44px;
+}
+
+.footer .footer-dialog-body h3 {
+  margin: 0 70px 10px 0;
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.footer .footer-dialog-body h3.footer-dialog-title-marked {
+  padding-left: 41px;
+  background: var(--footer-dialog-mark) no-repeat 0 5px / 32px;
+}
+
+.footer .footer-dialog-body p {
+  margin: 16.96px 0;
+}
+
+.footer .footer-dialog-body p:last-child {
+  margin-bottom: 0;
+}
+
+.footer .footer-dialog-body ul {
+  margin: 16.96px 0;
+}
+
+.footer .footer-dialog-item {
+  display: flex;
+  align-items: center;
+  max-width: 560px;
+  min-height: 55px;
+  border-top: 1px solid #a9aeb1;
+}
+
+.footer .footer-dialog-item:last-child {
+  border-bottom: 1px solid #a9aeb1;
+}
+
+.footer .footer-dialog-item-icon {
+  box-sizing: content-box;
+  width: 26px;
+  height: 26px;
+  padding: 10px;
+}
+
+.footer .footer-dialog a:any-link {
+  color: var(--vads-color-primary);
+  text-decoration: underline;
+}
+
+.footer .footer-dialog-item-link:hover {
+  background-color: rgb(0 0 0 / 5%);
+  color: var(--vads-color-primary);
+}
+
+.footer .footer-dialog-body p a:hover {
+  background-color: rgb(0 0 0 / 5%);
+  color: var(--text-color);
+}
+
+/* small-screen accordion copy of the link columns */
+.footer .footer-accordion {
+  display: block;
+  font-size: 16.96px;
+  line-height: 25.44px;
+}
+
+.footer .footer-accordion-item {
+  margin: 0 0 6px;
+}
+
+.footer .footer-accordion-alert {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  background-color: #8b0a03;
+  text-align: center;
+}
+
+.footer .footer-accordion-alert-button {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--vads-color-white);
+  font-family: var(--body-font-family);
+  font-size: 16.96px;
+  font-weight: 400;
+  line-height: 25.44px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer .footer-accordion-alert-button img {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+.footer .footer-accordion-heading {
+  padding-bottom: 16px;
+}
+
+.footer .footer-accordion-toggle {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 16px 8px;
+  border: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  background: #1a4480 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 402 402'%3E%3Cpath fill='white' d='M394 154.175c-5.33-5.33-11.806-7.994-19.417-7.994H255.81V27.41c0-7.61-2.665-14.084-7.993-19.414C242.487 2.666 236.02 0 228.397 0h-54.81c-7.613 0-14.085 2.663-19.415 7.993-5.33 5.33-7.994 11.803-7.994 19.414v118.775H27.408c-7.612 0-14.085 2.664-19.415 7.994S0 165.973 0 173.59v54.818c0 7.618 2.662 14.086 7.992 19.41 5.33 5.333 11.803 7.995 19.414 7.995h118.77V374.59c0 7.61 2.665 14.09 7.995 19.417 5.33 5.325 11.806 7.987 19.418 7.987H228.4c7.618 0 14.087-2.662 19.418-7.987 5.332-5.33 7.994-11.806 7.994-19.417V255.813h118.77c7.618 0 14.09-2.662 19.417-7.994 5.325-5.33 7.99-11.797 7.99-19.415v-54.82c0-7.615-2.66-14.086-7.993-19.413z'/%3E%3C/svg%3E") no-repeat calc(100% - 20px) 50% / 15px;
+  color: var(--vads-color-white);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer .footer-accordion-toggle:focus {
+  /* source marks the focused toggle with yellow top/bottom rules */
+  border-top-color: var(--focus-color);
+  border-bottom-color: var(--focus-color);
+  outline: none;
+}
+
+.footer .footer-accordion-toggle[aria-expanded="true"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 402 402'%3E%3Cpath fill='white' d='M394 154.174c-5.33-5.33-11.806-7.995-19.417-7.995H27.406c-7.61 0-14.084 2.66-19.414 7.99C2.662 159.5 0 165.97 0 173.586v54.82c0 7.617 2.662 14.086 7.992 19.41 5.33 5.332 11.803 7.994 19.414 7.994h347.176c7.61 0 14.086-2.66 19.417-7.993 5.32-5.324 7.99-11.793 7.99-19.41v-54.82c0-7.615-2.66-14.087-7.99-19.413z'/%3E%3C/svg%3E");
+}
+
+.footer .footer-accordion-panel {
+  padding: 15px 20px;
+}
+
+.footer .footer-accordion-item-headed .footer-accordion-panel {
+  padding: 15px 20px 0 4px;
+}
+
+.footer .footer-panel-title {
+  padding-bottom: 8px;
+}
+
+.footer .footer-panel-subtitle {
+  margin-top: 16px;
+}
+
+.footer .footer-accordion-panel .footer-links:not(:last-child) {
+  margin-bottom: 16.96px;
+}
+
+.footer .footer-accordion-panel .footer-links li {
+  margin: 0 0 8.48px;
+}
+
+.footer .footer-accordion-panel .footer-links a:hover {
+  background-color: rgb(0 0 0 / 5%);
+}
+
+/* wide screens: four static columns, bordered band; accordion hidden */
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  .footer .footer-inner {
+    padding: 20px 10px 0;
+  }
+
+  .footer .footer-columns {
+    display: flex;
+  }
+
+  .footer .footer-accordion {
+    display: none;
+  }
+
+  .footer .footer-band-bordered {
+    display: block;
+  }
+
+  .footer .footer-column {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 32px 16px 24px 0;
+  }
+
+  .footer .footer-column:last-child {
+    margin: 32px 0 0;
   }
 }

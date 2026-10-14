@@ -1,0 +1,25 @@
+{
+  "variantName": "cards-rail-promo",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "minimal",
+    "purpose": "rail-promo",
+    "imagePattern": "image-top",
+    "structure": "image + heading link + text (single card)"
+  },
+  "contentPattern": "Cards, 1 row, 2 cells: [image | <h2><a href='https://www.caregiver.va.gov/'>VA Caregiver Support Program</a></h2><p>Find out how to get the support you need to care for a Veteran.</p>]. The image stacks above the text. Gap pages change only the image, link and text (e.g. 'Healthcare options for Veterans turning 65', 'National Call Center for Homeless Veterans', 'Learn how to apply for Veterans Affairs Life Insurance (VALife)').",
+  "usage": {
+    "pagesUsing": [
+      "https://www.va.gov/family-and-caregiver-benefits/",
+      "https://www.va.gov/health-care/",
+      "https://www.va.gov/housing-assistance/",
+      "https://www.va.gov/life-insurance/"
+    ],
+    "reuseCount": 4,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": ["cards-rail-promo"]
+}

@@ -1,0 +1,25 @@
+{
+  "variantName": "accordion-contact",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "purpose": "contact-and-social-links",
+    "imagePattern": "icon",
+    "structure": "item title + subheadings + link lists + social icons (open by default)"
+  },
+  "contentPattern": "Accordion, rows = [title | content]. 'Ask questions' | <h3>Message us</h3><ul><li><a href='/contact-us/ask-va'>Contact us online through Ask VA</a></li></ul><h3>Call us</h3><ul><li><a href='tel:1-800-827-1000'>VA benefits hotline:<br>800-827-1000</a></li>...</ul> (numbers vary per hub). 'Connect with us' | <h3>Get updates</h3><p>:mail: <a>Veterans Affairs Email Updates</a></p><h3>Follow us</h3><ul><li>:x: <a>...</a></li><li>:facebook: ...</li><li>:youtube: ...</li><li>:instagram: ...</li></ul>. Housing adds 'Not a Veteran or family member?' | <h3>Get information for:</h3><ul>4 links</ul>. All items open by default; Expand all / Collapse all controls rendered when there is more than one item. Icons: icons/mail.svg, x.svg, facebook.svg, youtube.svg, instagram.svg.",
+  "usage": {
+    "pagesUsing": [
+      "https://www.va.gov/family-and-caregiver-benefits/",
+      "https://www.va.gov/health-care/",
+      "https://www.va.gov/housing-assistance/",
+      "https://www.va.gov/life-insurance/"
+    ],
+    "reuseCount": 4,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": ["accordion-contact"]
+}

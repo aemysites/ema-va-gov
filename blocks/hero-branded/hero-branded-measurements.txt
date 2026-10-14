@@ -1,0 +1,72 @@
+VISUAL MEASUREMENT CHECKLIST FOR hero-branded
+================================================
+Extracted from Figma node: 3419:70015 ("Home Hero - Branded"), children
+  I3419:70015;2194:13562 (Container: Multiple Slots) and
+  I3419:70015;2194:13562;2194:12104;2194:9643 (Slot 01)
+File: auGQWuqnPZcXOwxTNHmdw8 (One AZ 3.1 – Market Master)
+Date: 2026-10-14
+
+LAYOUT & DIMENSIONS
+☑ Container width: 1440px frame / 1180px content (source: metadata width=1440; Container Content max-w-[1180px]; variable site-max-width=1180)
+☑ Container height: 431px (source: metadata height=431.3558 — driven by image aspect ratio 575x431)
+☑ Container padding: top 0px right 130px bottom 0px left 130px at 1440 (source: Container Content x=-5132 vs frame x=-5262 → (1440-1180)/2 = 130; no py classes)
+☑ Grid/Flex gap: 30px (source: Slot 01 flex-row gap-[30px])
+☑ Column count: 2 (source: Slot 01 children cmp-teaser__content + Image)
+☑ Item width: 575px each column (source: metadata cmp-teaser__content width=575, Image width=575)
+☑ Item height: content 294px, image 431px (source: metadata heights)
+
+SPACING (EXACT PIXELS)
+☑ Section padding: 0px vertical (source: no padding classes on Container: Multiple Slots / Slot 01)
+☑ Item internal padding: 0px 0px 0px 0px content column (source: cmp-teaser__content has gap only, no padding)
+☑ Gap between items: 30px (source: Slot 01 gap-[30px])
+☑ Margin between text elements: 16px (source: cmp-teaser__content flex-col gap-[16px])
+☑ Image margin/padding: 0px; logo slot pt 20px pb 16px within 270x88 asset (source: brandSlot pt-[20px] pb-[16px] w-[270px]; pretitle frame height 88)
+
+COLORS (EXACT HEX + OPACITY)
+☑ Background color: #ebefee (opacity: 100%) (source: bg-[var(--Background-Supporting-1,#ebefee)])
+☑ Primary text color: #830051 title (source: text-[color:var(--Text-Title-1,#830051)]; variable Color/830051)
+☑ Secondary text color: #363b3b body (source: text-[color:var(--Text-Body-1,#363b3b)]; variable Color/363B3B)
+☑ Accent/link color: #d0006f button background (source: Backing / Primary bg-[#d0006f]; variable Color/D0006F)
+☑ Border color: #d0006f (opacity: 100%) button border (source: border-[1px] border-solid border-[#d0006f])
+☑ Hover background: #830051 (source: not in extraction — Figma state not exported; brand title colour Color/830051 used as darker hover shade)
+☑ Hover text color: #ffffff (source: button text text-[#ffffff]; unchanged on hover)
+
+TYPOGRAPHY (ALL PROPERTIES)
+☑ Heading font-family: Lexia (source: font-['Lexia',sans-serif]; variable Font-Family/Lexia)
+☑ Heading font-size: 56px (source: text-[56px]; variable Headings/Lexia-56)
+☑ Heading font-weight: 400 (source: font-normal; Headings/Lexia-56 weight 400)
+☑ Heading line-height: 60px (source: leading-[60px])
+☑ Heading letter-spacing: 0px (source: no tracking-* class)
+☑ Heading text-transform: none (source: no uppercase/capitalize class)
+☑ Heading font-style: normal (source: style Regular)
+☑ Body font-family: Inter (source: font-['Inter',sans-serif]; variable Font-Family/Inter)
+☑ Body font-size: 18px (source: text-[18px]; variable Body/Inter-18)
+☑ Body font-weight: 400 (source: font-normal)
+☑ Body line-height: 28px (source: leading-[28px])
+☑ Body letter-spacing: 0px (source: no tracking-* class)
+☑ Body font-style: normal (source: style Regular)
+☑ Body max-width: 577px (source: cmp-teaser__description max-w-[577px])
+☑ Button font: Inter 16px / 24px, weight 600 (source: font-semibold text-[16px] leading-[24px]; variable Body/Inter-16)
+☑ Button padding: 8px 16px, min-height 42px (source: px-[16px] py-[8px] min-h-[42px])
+
+BORDERS & RADIUS (⚠️ CRITICAL - DO NOT ASSUME)
+☑ Border width: 1px button (source: border-[1px])
+☑ Border style: solid (source: border-solid)
+☑ Border color: #d0006f (source: border-[#d0006f])
+☑ Border radius: 4px button; 0px container/image (source: rounded-[4px] on Backing / Primary; no rounded classes elsewhere)
+
+SHADOWS (EXACT VALUES)
+☑ Box-shadow offset-x: 0px (source: no shadow classes)
+☑ Box-shadow offset-y: 0px (source: no shadow classes)
+☑ Box-shadow blur: 0px (source: no shadow classes)
+☑ Box-shadow spread: 0px (source: no shadow classes)
+☑ Box-shadow color: rgba(0,0,0,0) (source: no shadow present)
+
+EFFECTS & TRANSITIONS
+☑ Hover transform: none (source: no transform in extraction)
+☑ Transition duration: 200ms (source: not in extraction — default for colour change only)
+☑ Transition timing: ease (source: not in extraction — default)
+☑ Opacity changes: none (source: no opacity classes)
+
+RESPONSIVE (not in Figma desktop frame — Breakpoint variable = Desktop)
+☑ Below 900px: columns stack (content then image), side padding 24px (source: project convention; no mobile frame provided)

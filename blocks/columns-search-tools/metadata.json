@@ -1,0 +1,20 @@
+{
+  "variantName": "columns-search-tools",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "split light/light-blue",
+    "density": "dense",
+    "purpose": "search-and-top-links",
+    "imagePattern": "noimg",
+    "structure": "heading + search input + subheading + action link list | heading + 2-col link list"
+  },
+  "contentPattern": "1 row, 2 cells. Cell 1: H2 'Search', link to https://www.va.gov/search/ (decorated to search form), H3 'Other search tools', UL of 4 links. Cell 2: H2 'Top pages', UL of 9 links.",
+  "usage": {
+    "pagesUsing": ["https://www.va.gov/"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": ["columns-search-tools"]
+}

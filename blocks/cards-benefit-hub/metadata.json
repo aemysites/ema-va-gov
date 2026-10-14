@@ -1,0 +1,20 @@
+{
+  "variantName": "cards-benefit-hub",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "purpose": "benefit-hub-links",
+    "imagePattern": "icon",
+    "structure": "icon + heading link + text (3-col grid, 12 items)"
+  },
+  "contentPattern": "12 rows, 1 cell each: H3 containing ':icon: ' + link (e.g. ':medical-services: Health care' -> /health-care), paragraph description. Icon tokens render as span.icon.icon-NAME; recognised names with colour hooks: medical-services, description, school, work, handshake, home, shield, star, id-card, flag, groups, account-balance.",
+  "usage": {
+    "pagesUsing": ["https://www.va.gov/"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": ["cards-benefit-hub"]
+}
